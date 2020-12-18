@@ -1,12 +1,5 @@
-Project boilerplate with parcel and automatic deployment into the GitHub pages branch.
-SCSS included.
 
-## How to use
-- run `npm install`
-- turn on the source for GitHub pages to be the `gh-pages` branch, if it doesn't exist it will be created automatically by the build script
-- link scss files directly inside index.html or import them in javascript 
-- set the homepage inside package.json to follow this format https://<your gh username>.github.io/<your repo name>
-  
-## Scripts
-- `npm run deploy` to deploy into gh-pages branch
-- `npm run dev` run development environment
+
+### What is Somnia?
+
+Somnia is the # 1 app for ASMR (Autonomous Sensory Meridian Response) sleep. It uses AI (Artificial Intelligence) to handpick tailored, customizable ASMR sounds to help its users fall asleep. The app has been created by Egil Sandfeld and Alice Jennings, and has won the Danish Sound Startup Pitch Battle 2018. Somnia started off as Ro (Danish for Rest), but rebranded into its current name due to the founders' research on how the latter name, Somnia, would work better also for international markets, but it is also pronounceable with more ease. The app is free to use for 30 minutes a day, after which the user is asked to pay a monthly subscription or a one-time fee.
