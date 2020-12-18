@@ -1,4 +1,4 @@
-
+![somnia logo](https://adamgiebl.github.io/adamgiebl/sheep.svg)
 
 ### What is Somnia?
 
