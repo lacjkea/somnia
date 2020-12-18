@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\adamg\\projects\\somnia\\static\\wave.svg":[["wave.4863e949.svg","static/wave.svg"],"static/wave.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\stars.svg":[["stars.069146f0.svg","static/stars.svg"],"static/stars.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/script.js":[function(require,module,exports) {
+},{"C:\\Users\\adamg\\projects\\somnia\\static\\Kefa.ttc":[["Kefa.1bef6185.ttc","static/Kefa.ttc"],"static/Kefa.ttc"],"C:\\Users\\adamg\\projects\\somnia\\static\\wave.svg":[["wave.4863e949.svg","static/wave.svg"],"static/wave.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\stars.svg":[["stars.069146f0.svg","static/stars.svg"],"static/stars.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\purple-blob.svg":[["purple-blob.f4e90e31.svg","static/purple-blob.svg"],"static/purple-blob.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/script.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/style.scss");
@@ -234,7 +234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58507" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54959" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
