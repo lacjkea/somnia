@@ -1,0 +1,32 @@
+.intro-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--sectionMargin);
+
+  .image {
+    max-width: 700px;
+  }
+
+  .text {
+    margin-right: 60px;
+    h2 {
+      color: var(--textOrange);
+      max-width: 10em;
+    }
+    .button {
+      margin-top: 40px;
+      display: block;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+      margin-bottom: 60px;
+    }
+
+    .sub-text {
+      font-size: 20px;
+      color: var(--textPurple);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sectionMargin);
+
+  .text {
+    margin-left: 150px;
+    h1 {
+      font-size: 50px;
+      max-width: 10em;
+    }
+    .button {
+      margin-top: 40px;
+    }
+  }
+}

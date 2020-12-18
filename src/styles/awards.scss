@@ -1,0 +1,28 @@
+.awards-section {
+  height: 1254px;
+  position: relative;
+  overflow: visible;
+  background: url('/static/purple-blob.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .awards {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 100px;
+  }
+
+  .note {
+    position: absolute;
+    left: 10%;
+    top: 150px;
+    font-size: 45px;
+    max-width: 600px;
+    color: var(--lightPurple);
+  }
+}

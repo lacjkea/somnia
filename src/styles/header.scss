@@ -1,0 +1,37 @@
+header {
+  max-width: var(--headerWidth);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 70px;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      margin-left: 40px;
+    }
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .wave,
+  .stars {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url('/static/wave.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: -1;
+  }
+  .stars {
+    background: url('/static/stars.svg');
+  }
+}
