@@ -189,12 +189,23 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/script.js":[function(require,module,exports) {
+},{"C:\\Users\\adamg\\projects\\somnia\\static\\wave.svg":[["wave.4863e949.svg","static/wave.svg"],"static/wave.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\stars.svg":[["stars.069146f0.svg","static/stars.svg"],"static/stars.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/script.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/style.scss");
 
 console.log('Works');
+var movementStrength = 25;
+var height = movementStrength / window.innerHeight;
+var width = movementStrength / window.innerWidth;
+document.querySelector('body').addEventListener('mousemove', function (e) {
+  var pageX = e.pageX - window.innerWidth / 2;
+  var pageY = e.pageY - window.innerHeight / 2;
+  var newvalueX = width * pageX * -1 - 25;
+  var newvalueY = height * pageY * -1 - 50;
+  console.log(newvalueX, newvalueY);
+  document.querySelector('.stars').style.backgroundPosition = newvalueX + 'px ' + newvalueY + 'px';
+});
 },{"./styles/style.scss":"src/styles/style.scss"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -223,7 +234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58507" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
