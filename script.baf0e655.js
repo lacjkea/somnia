@@ -4662,13 +4662,13 @@ var positionFeatures = function positionFeatures(rotated) {
   });
 };
 
-console.log(Math.max(window.innerWidth, document.documentElement.clientWidth));
-positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700);
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
 window.addEventListener('scroll', function () {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700);
+  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
 });
 window.addEventListener('resize', function () {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700);
+  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
 });
 },{"./styles/style.scss":"src/styles/style.scss","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
