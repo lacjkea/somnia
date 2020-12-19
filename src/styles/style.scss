@@ -9,6 +9,7 @@
   --headerWidth: 1600px;
   --textBlue: #261d69;
   --textPurple: #6b55ae;
+  --purple: #a884ff;
   --textOrange: #feb02a;
   --lightPurple: #dccffd;
   --sectionMargin: 100px;
@@ -36,6 +37,11 @@ body {
   margin: 10px 0;
 }
 
+.sub-text {
+  font-size: 20px;
+  color: var(--textPurple);
+}
+
 .button {
   padding: 15px 30px;
   border-radius: 30px;
@@ -44,6 +50,13 @@ body {
   border: none;
   font-weight: 600;
   cursor: pointer;
+  font-size: 15px;
+
+  &--lg {
+    padding: 20px 38px;
+    border-radius: 40px;
+    font-size: 20px;
+  }
 }
 
 .wrapper {
@@ -62,3 +75,6 @@ h2 {
 @import './intro.scss';
 @import './features.scss';
 @import './awards.scss';
+@import './audio.scss';
+@import './download.scss';
+@import 'https://cdn.plyr.io/3.6.3/plyr.css';

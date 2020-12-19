@@ -3,8 +3,6 @@
   max-width: 1500px;
 
   .features {
-    position: relative;
-    height: 300px;
     .line-image {
       max-width: 100%;
     }
@@ -12,27 +10,14 @@
       max-width: 230px;
       position: absolute;
       width: 100%;
+      top: 0;
+      left: 0;
       color: var(--lightPurple);
 
       h3 {
         font-size: 30px;
         margin-bottom: 10px;
       }
-    }
-    .feature[data-feature-number='1'] {
-      top: 200px;
-    }
-    .feature[data-feature-number='2'] {
-      top: 170px;
-      left: 380px;
-    }
-    .feature[data-feature-number='3'] {
-      top: 115px;
-      left: 800px;
-    }
-    .feature[data-feature-number='4'] {
-      top: 170px;
-      left: 1233px;
     }
   }
 }
