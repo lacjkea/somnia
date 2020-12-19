@@ -4645,20 +4645,27 @@ document.querySelectorAll('audio').forEach(function (el) {
   new _plyr.default('.' + el.classList[0], {});
 });
 var features = document.querySelectorAll('.feature');
+var lineSvg = document.querySelector('.line-image');
 
-var positionFeatures = function positionFeatures() {
-  document.querySelectorAll('.circle-group').forEach(function (g, i) {
-    var moveToLeft = features[i].offsetWidth / 2 - 50;
-    var marginTop = 80;
-    features[i].style.left = "".concat(g.getBoundingClientRect().left - moveToLeft, "px");
+var positionFeatures = function positionFeatures(rotated) {
+  var target = rotated ? '.line-image-rotated' : '.line-image';
+  document.querySelectorAll("".concat(target, " .circle-group")).forEach(function (g, i) {
+    var moveToLeft = rotated ? 80 : -features[i].offsetWidth / 2 + 50;
+    var marginTop = lineSvg.clientHeight / 3;
+    features[i].style.left = "".concat(g.getBoundingClientRect().left + moveToLeft, "px"); // adding scrollY because getBoundingClientRect returns a position relative to the viewport
+
     features[i].style.top = "".concat(g.getBoundingClientRect().top + marginTop + window.scrollY, "px");
-    features[i].style.display = 'visible';
+    features[i].style.visibility = 'visible';
   });
 };
 
 positionFeatures();
-window.addEventListener('scroll', positionFeatures);
-window.addEventListener('resize', positionFeatures);
+window.addEventListener('scroll', function () {
+  positionFeatures(window.innerWidth < 700);
+});
+window.addEventListener('resize', function () {
+  positionFeatures(window.innerWidth < 700);
+});
 },{"./styles/style.scss":"src/styles/style.scss","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -4687,7 +4694,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57380" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63162" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
