@@ -1,3 +1,4 @@
+@import 'https://cdn.plyr.io/3.6.3/plyr.css';
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
   --headerWidth: 1600px;
   --textBlue: #261d69;
   --textPurple: #6b55ae;
+  --purple: #a884ff;
   --textOrange: #feb02a;
   --lightPurple: #dccffd;
   --sectionMargin: 100px;
@@ -35,6 +37,11 @@ body {
   margin: 10px 0;
 }
 
+.sub-text {
+  font-size: 20px;
+  color: var(--textPurple);
+}
+
 .button {
   padding: 15px 30px;
   border-radius: 30px;
@@ -43,6 +50,12 @@ body {
   border: none;
   font-weight: 600;
   cursor: pointer;
+  font-size: 15px;
+}
+.button--lg {
+  padding: 20px 38px;
+  border-radius: 40px;
+  font-size: 20px;
 }
 
 .wrapper {
@@ -140,10 +153,6 @@ header .stars {
   margin-bottom: var(--sectionMargin);
   max-width: 1500px;
 }
-.features-section .features {
-  position: relative;
-  height: 300px;
-}
 .features-section .features .line-image {
   max-width: 100%;
 }
@@ -151,26 +160,13 @@ header .stars {
   max-width: 230px;
   position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
   color: var(--lightPurple);
 }
 .features-section .features .feature h3 {
   font-size: 30px;
   margin-bottom: 10px;
-}
-.features-section .features .feature[data-feature-number="1"] {
-  top: 200px;
-}
-.features-section .features .feature[data-feature-number="2"] {
-  top: 170px;
-  left: 380px;
-}
-.features-section .features .feature[data-feature-number="3"] {
-  top: 115px;
-  left: 800px;
-}
-.features-section .features .feature[data-feature-number="4"] {
-  top: 170px;
-  left: 1233px;
 }
 
 .awards-section {
@@ -198,6 +194,70 @@ header .stars {
   font-size: 45px;
   max-width: 600px;
   color: var(--lightPurple);
+}
+
+.audio-section {
+  margin-bottom: var(--sectionMargin);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.audio-section .image {
+  margin-left: 20px;
+}
+.audio-section .section-title {
+  margin-bottom: 20px;
+}
+.audio-section .audio-list {
+  padding: 40px 0;
+}
+.audio-section .audio-list .audio-container {
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: var(--textOrange);
+  --plyr-color-main: var(--textBlue);
+  --plyr-control-icon-size: 25px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  background: var(--background, linear-gradient(#36329c, #261d69));
+  padding: 30px;
+}
+.audio-section .audio-list .audio-container .plyr__control[data-plyr=settings],
+.audio-section .audio-list .audio-container .plyr__menu__container {
+  display: none;
+}
+.audio-section .audio-list .audio-container .plyr__volume {
+  width: 30%;
+}
+.audio-section .audio-list .audio-container .plyr__time {
+  color: var(--lightPurple);
+}
+.audio-section .audio-list .audio-container input[type=range]::-webkit-slider-thumb {
+  background: var(--lightPurple);
+  border: none;
+}
+.audio-section .audio-list .audio-container .titles {
+  color: var(--purple);
+  font-size: 15px;
+}
+.audio-section .audio-list .audio-container .titles .audio-title {
+  font-size: 20px;
+  color: var(--lightPurple);
+  margin-bottom: 5px;
+}
+.audio-section .sub-text {
+  display: inline-block;
+  max-width: 500px;
+}
+
+.download-section {
+  text-align: center;
+  margin-bottom: var(--sectionMargin);
+}
+.download-section h2 {
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=/script.baf0e655.css.map */
