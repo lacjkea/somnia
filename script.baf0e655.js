@@ -4656,6 +4656,7 @@ var positionFeatures = function positionFeatures() {
   });
 };
 
+positionFeatures();
 window.addEventListener('scroll', positionFeatures);
 window.addEventListener('resize', positionFeatures);
 },{"./styles/style.scss":"src/styles/style.scss","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
