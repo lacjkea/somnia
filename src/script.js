@@ -19,20 +19,17 @@ document.querySelectorAll('audio').forEach(el => {
   new Plyr('.' + el.classList[0], {})
 })
 
-// calculate the correct offset of an element relative to the window
-const getOffset = element => {
-  const bound = element.getBoundingClientRect()
-  const doc = document.documentElement
-
-  return {
-    top: bound.top + window.pageYOffset - doc.clientTop,
-    left: bound.left + window.pageXOffset - doc.clientLeft
-  }
+const positionFeatures = () => {
+  document.querySelectorAll('.circle-group').forEach((g, i) => {
+    console.log(g.getBoundingClientRect())
+    const moveToLeft = features[i].offsetWidth / 2 - 50
+    const marginTop = 80
+    features[i].style.left = `${g.getBoundingClientRect().left - moveToLeft}px`
+    features[i].style.top = `${g.getBoundingClientRect().top + marginTop + window.scrollY}px`
+    features[i].style.display = 'visible'
+  })
 }
 
 const features = document.querySelectorAll('.feature')
-document.querySelectorAll('.circle-group').forEach((g, i) => {
-  const moveToLeft = features[i].offsetWidth / 2
-  features[i].style.left = `${getOffset(g).left - (moveToLeft - 50)}px`
-  features[i].style.top = `${getOffset(g).top + 80}px`
-})
+window.addEventListener('scroll', positionFeatures)
+window.addEventListener('resize', positionFeatures)
