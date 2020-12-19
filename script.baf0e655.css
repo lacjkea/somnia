@@ -25,7 +25,6 @@ body {
   background: var(--backgroundGradient);
   color: white;
   font-family: sans-serif;
-  min-height: 100vh;
   overflow-x: hidden;
   font-family: "Kefa", sans-serif;
 }
@@ -153,10 +152,16 @@ header .stars {
   margin-bottom: var(--sectionMargin);
   max-width: 1500px;
 }
+@media only screen and (max-width: 1300px) {
+  .features-section {
+    padding: 0 100px;
+  }
+}
 .features-section .features .line-image {
   max-width: 100%;
 }
-.features-section .features .feature {
+
+.feature {
   max-width: 230px;
   position: absolute;
   width: 100%;
@@ -164,9 +169,18 @@ header .stars {
   left: 0;
   color: var(--lightPurple);
 }
-.features-section .features .feature h3 {
+.feature h3 {
   font-size: 30px;
   margin-bottom: 10px;
+}
+@media only screen and (max-width: 1300px) {
+  .feature {
+    font-size: 1.7vw;
+    max-width: 20vw;
+  }
+  .feature h3 {
+    font-size: 2vw;
+  }
 }
 
 .awards-section {

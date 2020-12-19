@@ -4643,23 +4643,21 @@ document.querySelector('body').addEventListener('mousemove', function (e) {
 document.querySelectorAll('audio').forEach(function (el) {
   console.log(el.classList);
   new _plyr.default('.' + el.classList[0], {});
-}); // calculate the correct offset of an element relative to the window
+});
+var features = document.querySelectorAll('.feature');
 
-var getOffset = function getOffset(element) {
-  var bound = element.getBoundingClientRect();
-  var doc = document.documentElement;
-  return {
-    top: bound.top + window.pageYOffset - doc.clientTop,
-    left: bound.left + window.pageXOffset - doc.clientLeft
-  };
+var positionFeatures = function positionFeatures() {
+  document.querySelectorAll('.circle-group').forEach(function (g, i) {
+    var moveToLeft = features[i].offsetWidth / 2 - 50;
+    var marginTop = 80;
+    features[i].style.left = "".concat(g.getBoundingClientRect().left - moveToLeft, "px");
+    features[i].style.top = "".concat(g.getBoundingClientRect().top + marginTop + window.scrollY, "px");
+    features[i].style.display = 'visible';
+  });
 };
 
-var features = document.querySelectorAll('.feature');
-document.querySelectorAll('.circle-group').forEach(function (g, i) {
-  var moveToLeft = features[i].offsetWidth / 2;
-  features[i].style.left = "".concat(getOffset(g).left - (moveToLeft - 50), "px");
-  features[i].style.top = "".concat(getOffset(g).top + 80, "px");
-});
+window.addEventListener('scroll', positionFeatures);
+window.addEventListener('resize', positionFeatures);
 },{"./styles/style.scss":"src/styles/style.scss","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
