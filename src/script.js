@@ -1,6 +1,7 @@
 import './styles/style.scss'
 import './features'
 import './audio'
+import './feedback'
 
 console.log('Works')
 

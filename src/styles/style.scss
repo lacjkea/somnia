@@ -6,6 +6,7 @@
 
 :root {
   --backgroundGradient: radial-gradient(#261d69, #130f35);
+  --blueGradient: linear-gradient(#36329c, #261d69);
   --headerWidth: 1600px;
   --textBlue: #261d69;
   --textPurple: #6b55ae;
@@ -89,4 +90,5 @@ h2 {
 @import './download.scss';
 @import './stars.scss';
 @import './footer.scss';
+@import './feedback.scss';
 @import 'https://cdn.plyr.io/3.6.3/plyr.css';
