@@ -4,14 +4,34 @@
   justify-content: center;
   margin-bottom: var(--sectionMargin);
 
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap-reverse;
+  }
+
   .text {
     margin-left: 150px;
+    @media only screen and (max-width: 1300px) {
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
     h1 {
       font-size: 50px;
       max-width: 10em;
+
+      @media only screen and (max-width: 1300px) {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: 800px) {
+        font-size: 50px;
+      }
     }
     .button {
       margin-top: 40px;
+    }
+  }
+  .image {
+    @media only screen and (max-width: 1300px) {
+      max-width: 250px;
     }
   }
 }

@@ -1,4 +1,5 @@
 import './styles/style.scss'
+import './features'
 import Plyr from 'plyr'
 
 console.log('Works')
@@ -15,21 +16,6 @@ document.querySelector('body').addEventListener('mousemove', e => {
 })
 
 document.querySelectorAll('audio').forEach(el => {
-  console.log(el.classList)
+  //console.log(el.classList)
   new Plyr('.' + el.classList[0], {})
 })
-
-const positionFeatures = () => {
-  document.querySelectorAll('.circle-group').forEach((g, i) => {
-    console.log(g.getBoundingClientRect())
-    const moveToLeft = features[i].offsetWidth / 2 - 50
-    const marginTop = 80
-    features[i].style.left = `${g.getBoundingClientRect().left - moveToLeft}px`
-    features[i].style.top = `${g.getBoundingClientRect().top + marginTop + window.scrollY}px`
-    features[i].style.display = 'visible'
-  })
-}
-
-const features = document.querySelectorAll('.feature')
-window.addEventListener('scroll', positionFeatures)
-window.addEventListener('resize', positionFeatures)

@@ -3,12 +3,28 @@
   align-items: center;
   margin-bottom: var(--sectionMargin);
 
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .image {
-    max-width: 700px;
+    max-width: 600px;
+    width: 100%;
+
+    @media only screen and (max-width: 1300px) {
+      max-width: 450px;
+    }
   }
 
   .text {
     margin-right: 60px;
+    @media only screen and (max-width: 1300px) {
+      margin-right: 30px;
+    }
+    @media only screen and (max-width: 900px) {
+      margin-right: 0;
+    }
     h2 {
       color: var(--textOrange);
       max-width: 10em;

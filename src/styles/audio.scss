@@ -1,10 +1,22 @@
 .audio-section {
   margin-bottom: var(--sectionMargin);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
   .image {
-    margin-left: 20px;
+    margin-left: 80px;
+
+    @media only screen and (max-width: 1300px) {
+      max-width: 250px;
+    }
+    @media only screen and (max-width: 1000px) {
+      margin-left: 0;
+      margin-top: 60px;
+    }
   }
   .section-title {
     margin-bottom: 20px;
@@ -22,7 +34,13 @@
       margin-bottom: 40px;
       border-radius: 30px;
       background: var(--background, linear-gradient(#36329c, #261d69));
-      padding: 30px;
+      padding: 30px 40px;
+
+      @media only screen and (max-width: 630px) {
+        --plyr-control-icon-size: 40px;
+        flex-wrap: wrap;
+        padding: 25px 30px;
+      }
 
       .plyr__control[data-plyr='settings'],
       .plyr__menu__container {
