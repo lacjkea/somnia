@@ -7,6 +7,7 @@
 
 :root {
   --backgroundGradient: radial-gradient(#261d69, #130f35);
+  --blueGradient: linear-gradient(#36329c, #261d69);
   --headerWidth: 1600px;
   --textBlue: #261d69;
   --textPurple: #6b55ae;
@@ -167,7 +168,7 @@ header .stars {
 }
 @media only screen and (max-width: 800px) {
   .hero-section .text h1 {
-    font-size: 50px;
+    font-size: 37px;
   }
 }
 .hero-section .text .button {
@@ -238,7 +239,7 @@ header .stars {
   min-height: 400px;
   margin: auto;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1600px) {
   .features-section {
     padding: 0 90px;
   }
@@ -386,6 +387,7 @@ header .stars {
 }
 .audio-section .image {
   margin-left: 80px;
+  max-width: 280px;
 }
 @media only screen and (max-width: 1300px) {
   .audio-section .image {
@@ -505,8 +507,56 @@ footer .block--downloads h4 {
   font-size: 35px;
   margin-bottom: 15px;
 }
+footer .block--downloads img {
+  max-width: 180px;
+}
+footer .block--downloads img:first-child {
+  margin-right: 10px;
+}
 footer.wrapper {
   max-width: 1400px;
+}
+
+.feedback-section {
+  margin-bottom: var(--sectionMargin);
+}
+.feedback-section h2 {
+  margin-left: 20px;
+}
+.feedback-section .feedback-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.feedback-section .feedback-container .user-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 290px;
+  background: var(--blueGradient);
+  border-radius: 35px;
+  margin: 0 20px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.feedback-section .feedback-container .user-feedback .picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 20px;
+}
+.feedback-section .feedback-container .user-feedback .name {
+  align-self: flex-start;
+  color: var(--textOrange);
+  font-weight: 600;
+  padding-top: 20px;
+}
+.feedback-section .feedback-container .user-feedback .platform {
+  align-self: flex-start;
 }
 
 /*# sourceMappingURL=/script.baf0e655.css.map */

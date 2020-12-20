@@ -214,6 +214,8 @@ window.addEventListener('scroll', function () {
 });
 window.addEventListener('resize', function () {
   positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
+}, {
+  passive: true
 });
 },{}],"node_modules/plyr/dist/plyr.min.js":[function(require,module,exports) {
 var define;
@@ -4675,7 +4677,25 @@ var renderComposition = function renderComposition(composition) {
 
   new _plyr.default(".".concat(composition.slug), {});
 };
-},{"plyr":"node_modules/plyr/dist/plyr.min.js"}],"src/script.js":[function(require,module,exports) {
+},{"plyr":"node_modules/plyr/dist/plyr.min.js"}],"src/feedback.js":[function(require,module,exports) {
+var GET_USER_FEEDBACK_URL = 'https://javasquipt.com/wp-json/wp/v2/user_feedback?_embed';
+fetch(GET_USER_FEEDBACK_URL).then(function (data) {
+  return data.json();
+}).then(function (comments) {
+  console.log(comments);
+  comments.forEach(renderFeedback);
+});
+
+var renderFeedback = function renderFeedback(comment) {
+  var template = document.querySelector('#feedback-template').content;
+  var clone = template.cloneNode(true);
+  clone.querySelector('.comment').innerHTML = comment.excerpt.rendered;
+  clone.querySelector('.name').textContent = comment.title.rendered;
+  clone.querySelector('.platform').textContent = comment.platform;
+  clone.querySelector('.picture').src = comment._embedded['wp:featuredmedia'][0].source_url;
+  document.querySelector('.feedback-container').appendChild(clone);
+};
+},{}],"src/script.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/style.scss");
@@ -4683,6 +4703,8 @@ require("./styles/style.scss");
 require("./features");
 
 require("./audio");
+
+require("./feedback");
 
 console.log('Works');
 var movementStrength = 25;
@@ -4695,7 +4717,7 @@ document.querySelector('body').addEventListener('mousemove', function (e) {
   var newvalueY = height * pageY * -1 - 50;
   document.querySelector('.stars').style.backgroundPosition = newvalueX + 'px ' + newvalueY + 'px';
 });
-},{"./styles/style.scss":"src/styles/style.scss","./features":"src/features.js","./audio":"src/audio.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"src/styles/style.scss","./features":"src/features.js","./audio":"src/audio.js","./feedback":"src/feedback.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4723,7 +4745,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58249" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64170" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
