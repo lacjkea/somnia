@@ -1,0 +1,45 @@
+footer {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    flex-wrap: wrap;
+  }
+
+  .block {
+    margin: 10px;
+    h6 {
+      color: var(--textOrange);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: none;
+
+      li {
+        line-height: 1.4em;
+      }
+    }
+
+    &--downloads {
+      margin-top: -30px;
+      padding-top: 30px;
+      h6 {
+        color: var(--textOrange);
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &.wrapper {
+    max-width: 1400px;
+  }
+}

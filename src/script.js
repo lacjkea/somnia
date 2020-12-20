@@ -1,6 +1,6 @@
 import './styles/style.scss'
 import './features'
-import Plyr from 'plyr'
+import './audio'
 
 console.log('Works')
 
@@ -13,9 +13,4 @@ document.querySelector('body').addEventListener('mousemove', e => {
   const newvalueX = width * pageX * -1 - 25
   const newvalueY = height * pageY * -1 - 50
   document.querySelector('.stars').style.backgroundPosition = newvalueX + 'px ' + newvalueY + 'px'
-})
-
-document.querySelectorAll('audio').forEach(el => {
-  //console.log(el.classList)
-  new Plyr('.' + el.classList[0], {})
 })

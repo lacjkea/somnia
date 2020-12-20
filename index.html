@@ -210,7 +210,7 @@
       <div class="preview">
         <h2 class="section-title">Try some of our compositions</h2>
         <div class="audio-list">
-          <article class="audio-container" style="--background: linear-gradient(#36329c, #261d69)">
+          <!--<article class="audio-container" style="--background: linear-gradient(#36329c, #261d69)">
             <div class="titles">
               <h5 class="audio-title">Beach House</h5>
               <span class="audio-subtitle">Brown Noise, Water, Air...</span>
@@ -231,7 +231,7 @@
                 <source src="/assets/audio.mp3" type="audio/mp3" />
               </audio>
             </div>
-          </article>
+          </article>-->
         </div>
         <div class="separator"></div>
         <span class="sub-text"
@@ -239,6 +239,18 @@
         >
       </div>
       <img class="image" src="./assets/phone-compositions.png" alt="phone with compositions" />
+
+      <template id="composition">
+        <article class="audio-container" style="--background: linear-gradient(#36329c, #261d69)">
+          <div class="titles">
+            <h5 class="audio-title">{Title}</h5>
+            <span class="audio-subtitle">{Excerpt}</span>
+          </div>
+          <div class="audio-player">
+            <audio class="player-1" id="player" controls></audio>
+          </div>
+        </article>
+      </template>
     </section>
     <section class="download-section wrapper">
       <h2>Get some sleep</h2>
@@ -266,6 +278,46 @@
         <p>Triggers like slime, whispers, tapping, and many more</p>
       </article>
     </div>
+    <footer class="wrapper">
+      <div class="top">
+        <img src="./assets/logo.svg" alt="footer logo" />
+        <div class="block">
+          <h6>Download Somnia</h6>
+          <ul>
+            <li>Get started</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h6>Helpful links</h6>
+          <ul>
+            <li>What is ASMR?</li>
+            <li>Why Somnia</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h6>Get in touch</h6>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Reddit</li>
+            <li>Twitter</li>
+            <li>Discord</li>
+          </ul>
+        </div>
+        <div class="block block--downloads">
+          <h6>Get Somnia</h6>
+          <div class="download-buttons">
+            <img src="./assets/appstore.svg" alt="" />
+            <img src="./assets/googleplay.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2020 Somnia | Cookies | Privacy Policy | Terms & Conditions</span>
+        <span>Designed and developed by The Group </span>
+      </div>
+    </footer>
     <script src="./src/script.js"></script>
   </body>
 </html>
