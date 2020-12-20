@@ -4644,16 +4644,43 @@ var global = arguments[3];
 
   return Lt.defaults = (It = ot, JSON.parse(JSON.stringify(It))), Lt;
 });
-},{}],"src/script.js":[function(require,module,exports) {
+},{}],"src/audio.js":[function(require,module,exports) {
+"use strict";
+
+var _plyr = _interopRequireDefault(require("plyr"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GET_AUDIO_URL = 'https://javasquipt.com/wp-json/wp/v2/composition';
+fetch(GET_AUDIO_URL).then(function (data) {
+  return data.json();
+}).then(function (compositions) {
+  console.log(compositions);
+  compositions.forEach(renderComposition);
+});
+
+var renderComposition = function renderComposition(composition) {
+  var template = document.querySelector('#composition').content;
+  var clone = template.cloneNode(true);
+  clone.querySelector('.audio-title').textContent = composition.title.rendered;
+  clone.querySelector('.audio-subtitle').innerHTML = composition.excerpt.rendered;
+  clone.querySelector('audio').classList.add(composition.slug);
+  var source = document.createElement('source');
+  source.src = composition.audio_file.guid;
+  source.type = composition.audio_file.post_mime_type;
+  clone.querySelector('audio').appendChild(source);
+  document.querySelector('.audio-list').appendChild(clone); // create an audio player after appending
+
+  new _plyr.default(".".concat(composition.slug), {});
+};
+},{"plyr":"node_modules/plyr/dist/plyr.min.js"}],"src/script.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles/style.scss");
 
 require("./features");
 
-var _plyr = _interopRequireDefault(require("plyr"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+require("./audio");
 
 console.log('Works');
 var movementStrength = 25;
@@ -4666,11 +4693,7 @@ document.querySelector('body').addEventListener('mousemove', function (e) {
   var newvalueY = height * pageY * -1 - 50;
   document.querySelector('.stars').style.backgroundPosition = newvalueX + 'px ' + newvalueY + 'px';
 });
-document.querySelectorAll('audio').forEach(function (el) {
-  //console.log(el.classList)
-  new _plyr.default('.' + el.classList[0], {});
-});
-},{"./styles/style.scss":"src/styles/style.scss","./features":"src/features.js","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"src/styles/style.scss","./features":"src/features.js","./audio":"src/audio.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4698,7 +4721,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57699" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53824" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
