@@ -15,9 +15,13 @@ const positionFeatures = rotated => {
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
 positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
-window.addEventListener('scroll', () => {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
-})
+window.addEventListener(
+  'scroll',
+  () => {
+    positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
+  },
+  { passive: true }
+)
 window.addEventListener('resize', () => {
   positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
 })
