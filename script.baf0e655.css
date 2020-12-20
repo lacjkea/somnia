@@ -31,6 +31,10 @@ body {
   font-family: "Kefa", sans-serif;
 }
 
+img {
+  height: auto;
+}
+
 .separator {
   background: var(--textOrange);
   width: 100px;
