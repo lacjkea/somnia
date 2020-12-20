@@ -7,6 +7,10 @@
   @media only screen and (max-width: 1000px) {
     flex-wrap: wrap;
   }
+
+  @media only screen and (max-width: 630px) {
+    padding: 0 20px;
+  }
   .image {
     margin-left: 80px;
 
@@ -28,6 +32,7 @@
       --plyr-audio-control-color: var(--textOrange);
       --plyr-color-main: var(--textBlue);
       --plyr-control-icon-size: 25px;
+      --plyr-range-thumb-height: 20px;
       max-width: 600px;
       display: flex;
       align-items: center;
@@ -36,10 +41,20 @@
       background: var(--background, linear-gradient(#36329c, #261d69));
       padding: 30px 40px;
 
+      .audio-player {
+        flex-grow: 1;
+      }
+
       @media only screen and (max-width: 630px) {
         --plyr-control-icon-size: 40px;
+        --plyr-control-spacing: 15px;
         flex-wrap: wrap;
-        padding: 25px 30px;
+        padding: 30px 20px;
+
+        .plyr__controls {
+          padding: 0 !important;
+          padding-top: 20px !important;
+        }
       }
 
       .plyr__control[data-plyr='settings'],
@@ -48,7 +63,7 @@
       }
 
       .plyr__volume {
-        width: 30%;
+        width: 40%;
       }
 
       .plyr__time {
