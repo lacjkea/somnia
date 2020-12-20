@@ -22,6 +22,10 @@ window.addEventListener(
   },
   { passive: true }
 )
-window.addEventListener('resize', () => {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
-})
+window.addEventListener(
+  'resize',
+  () => {
+    positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile)
+  },
+  { passive: true }
+)

@@ -36,6 +36,13 @@ footer {
         font-size: 35px;
         margin-bottom: 15px;
       }
+      img {
+        max-width: 180px;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
     }
   }
 
