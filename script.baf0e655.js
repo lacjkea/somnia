@@ -189,7 +189,31 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\adamg\\projects\\somnia\\static\\Kefa.ttc":[["Kefa.1bef6185.ttc","static/Kefa.ttc"],"static/Kefa.ttc"],"C:\\Users\\adamg\\projects\\somnia\\static\\wave.svg":[["wave.4863e949.svg","static/wave.svg"],"static/wave.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\stars.svg":[["stars.069146f0.svg","static/stars.svg"],"static/stars.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\purple-blob.svg":[["purple-blob.f4e90e31.svg","static/purple-blob.svg"],"static/purple-blob.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/plyr/dist/plyr.min.js":[function(require,module,exports) {
+},{"C:\\Users\\adamg\\projects\\somnia\\static\\Kefa.ttc":[["Kefa.1bef6185.ttc","static/Kefa.ttc"],"static/Kefa.ttc"],"C:\\Users\\adamg\\projects\\somnia\\static\\wave.svg":[["wave.4863e949.svg","static/wave.svg"],"static/wave.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\stars.svg":[["stars.069146f0.svg","static/stars.svg"],"static/stars.svg"],"C:\\Users\\adamg\\projects\\somnia\\static\\purple-blob.svg":[["purple-blob.f4e90e31.svg","static/purple-blob.svg"],"static/purple-blob.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/features.js":[function(require,module,exports) {
+var features = document.querySelectorAll('.feature');
+var lineSvg = document.querySelector('.line-image');
+
+var positionFeatures = function positionFeatures(rotated) {
+  var target = rotated ? '.line-image-rotated' : '.line-image';
+  document.querySelectorAll("".concat(target, " .circle-group")).forEach(function (g, i) {
+    var moveToLeft = rotated ? 80 : -features[i].offsetWidth / 2 + 50;
+    var marginTop = lineSvg.clientHeight / 3;
+    features[i].style.left = "".concat(g.getBoundingClientRect().left + moveToLeft, "px"); // adding scrollY because getBoundingClientRect returns a position relative to the viewport
+
+    features[i].style.top = "".concat(g.getBoundingClientRect().top + marginTop + window.scrollY, "px");
+    features[i].style.visibility = 'visible';
+  });
+};
+
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
+window.addEventListener('scroll', function () {
+  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
+});
+window.addEventListener('resize', function () {
+  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
+});
+},{}],"node_modules/plyr/dist/plyr.min.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 "object" == typeof navigator && function (e, t) {
@@ -4625,6 +4649,8 @@ var global = arguments[3];
 
 require("./styles/style.scss");
 
+require("./features");
+
 var _plyr = _interopRequireDefault(require("plyr"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -4641,36 +4667,10 @@ document.querySelector('body').addEventListener('mousemove', function (e) {
   document.querySelector('.stars').style.backgroundPosition = newvalueX + 'px ' + newvalueY + 'px';
 });
 document.querySelectorAll('audio').forEach(function (el) {
-  console.log(el.classList);
+  //console.log(el.classList)
   new _plyr.default('.' + el.classList[0], {});
 });
-var features = document.querySelectorAll('.feature');
-var lineSvg = document.querySelector('.line-image');
-
-var positionFeatures = function positionFeatures(rotated) {
-  var target = rotated ? '.line-image-rotated' : '.line-image';
-  console.log(document.querySelectorAll("".concat(target, " .circle-group")));
-  document.querySelectorAll("".concat(target, " .circle-group")).forEach(function (g, i) {
-    var moveToLeft = rotated ? 80 : -features[i].offsetWidth / 2 + 50;
-    var marginTop = lineSvg.clientHeight / 3;
-    console.log('g.getBoundingClientRect().top', g.getBoundingClientRect());
-    features[i].style.left = "".concat(g.getBoundingClientRect().left + moveToLeft, "px"); // adding scrollY because getBoundingClientRect returns a position relative to the viewport
-
-    features[i].style.top = "".concat(g.getBoundingClientRect().top + marginTop + window.scrollY, "px");
-    features[i].style.visibility = 'visible';
-    console.log('target', target);
-  });
-};
-
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
-window.addEventListener('scroll', function () {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
-});
-window.addEventListener('resize', function () {
-  positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
-});
-},{"./styles/style.scss":"src/styles/style.scss","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/style.scss":"src/styles/style.scss","./features":"src/features.js","plyr":"node_modules/plyr/dist/plyr.min.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4698,7 +4698,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65461" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61791" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
