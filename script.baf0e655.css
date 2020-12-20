@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s;
 }
 
 :root {
@@ -16,6 +15,7 @@
   --lightPurple: #dccffd;
   --sectionMargin: 100px;
   --buttonGradient: linear-gradient(#fdc673, #fb924d);
+  --buttonGradientHover: linear-gradient(#f5b759, #da7634);
 }
 
 @font-face {
@@ -52,11 +52,15 @@ body {
   cursor: pointer;
   font-size: 15px;
   white-space: nowrap;
+  transition: all 0.3s;
 }
 .button--lg {
   padding: 20px 38px;
   border-radius: 40px;
   font-size: 20px;
+}
+.button:hover {
+  background: var(--buttonGradientHover);
 }
 
 .wrapper {
@@ -232,6 +236,7 @@ header .stars {
   margin-bottom: var(--sectionMargin);
   max-width: 1500px;
   min-height: 400px;
+  margin: auto;
 }
 @media only screen and (max-width: 1300px) {
   .features-section {
@@ -330,6 +335,7 @@ header .stars {
   display: grid;
   grid-auto-flow: column;
   gap: 100px;
+  justify-content: center;
 }
 @media only screen and (max-width: 1300px) {
   .awards-section .awards {
