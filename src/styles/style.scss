@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s;
 }
 
 :root {
@@ -15,6 +14,7 @@
   --lightPurple: #dccffd;
   --sectionMargin: 100px;
   --buttonGradient: linear-gradient(#fdc673, #fb924d);
+  --buttonGradientHover: linear-gradient(#f5b759, #da7634);
 }
 
 @font-face {
@@ -52,11 +52,16 @@ body {
   cursor: pointer;
   font-size: 15px;
   white-space: nowrap;
+  transition: all 0.3s;
 
   &--lg {
     padding: 20px 38px;
     border-radius: 40px;
     font-size: 20px;
+  }
+
+  &:hover {
+    background: var(--buttonGradientHover);
   }
 }
 
@@ -82,4 +87,5 @@ h2 {
 @import './awards.scss';
 @import './audio.scss';
 @import './download.scss';
+@import './stars.scss';
 @import 'https://cdn.plyr.io/3.6.3/plyr.css';
