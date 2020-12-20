@@ -4687,12 +4687,14 @@ fetch(GET_USER_FEEDBACK_URL).then(function (data) {
 });
 
 var renderFeedback = function renderFeedback(comment) {
+  var _comment$_embedded$wp;
+
   var template = document.querySelector('#feedback-template').content;
   var clone = template.cloneNode(true);
   clone.querySelector('.comment').innerHTML = comment.excerpt.rendered;
   clone.querySelector('.name').textContent = comment.title.rendered;
   clone.querySelector('.platform').textContent = comment.platform;
-  clone.querySelector('.picture').src = comment._embedded['wp:featuredmedia'][0].source_url;
+  clone.querySelector('.picture').src = ((_comment$_embedded$wp = comment._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail) === null || _comment$_embedded$wp === void 0 ? void 0 : _comment$_embedded$wp.source_url) || comment._embedded['wp:featuredmedia'][0].source_url;
   document.querySelector('.feedback-container').appendChild(clone);
 };
 },{}],"src/script.js":[function(require,module,exports) {
@@ -4745,7 +4747,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49622" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50036" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
