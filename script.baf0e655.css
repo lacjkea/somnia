@@ -356,7 +356,7 @@ header .stars {
   top: 150px;
   font-size: 45px;
   max-width: 600px;
-  color: var(--lightPurple);
+  color: var(--textPurple);
 }
 @media only screen and (max-width: 1300px) {
   .awards-section .note {
@@ -471,7 +471,7 @@ footer .bottom {
 footer .block {
   margin: 10px;
 }
-footer .block h6 {
+footer .block h4 {
   color: var(--textOrange);
   font-size: 23px;
   margin-bottom: 10px;
@@ -486,7 +486,7 @@ footer .block--downloads {
   margin-top: -30px;
   padding-top: 30px;
 }
-footer .block--downloads h6 {
+footer .block--downloads h4 {
   color: var(--textOrange);
   font-size: 35px;
   margin-bottom: 15px;
