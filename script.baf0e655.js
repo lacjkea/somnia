@@ -209,6 +209,8 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
 window.addEventListener('scroll', function () {
   positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
+}, {
+  passive: true
 });
 window.addEventListener('resize', function () {
   positionFeatures(Math.max(window.innerWidth, document.documentElement.clientWidth) < 700 || isMobile);
@@ -4721,7 +4723,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53824" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56148" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
