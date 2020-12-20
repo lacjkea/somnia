@@ -542,6 +542,11 @@ footer.wrapper {
   margin-bottom: 30px;
   padding: 30px;
 }
+@media only screen and (max-width: 500px) {
+  .feedback-section .feedback-container .user-feedback {
+    min-width: unset;
+  }
+}
 .feedback-section .feedback-container .user-feedback .picture {
   width: 100px;
   height: 100px;
