@@ -1,14 +1,19 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Somnia is the # 1 app for ASMR (Autonomous Sensory Meridian Response) sleep. It uses AI (Artificial Intelligence) to handpick tailored, customizable ASMR sounds to help its users fall asleep."
+    />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <title>Somnia - ASMR sleep</title>
   </head>
   <body>
     <header>
-      <img class="logo" src="./assets/logo.svg" alt="" />
+      <img class="logo" src="./assets/logo.svg" alt="" width="170" height="56" />
       <div class="wave"></div>
       <div class="stars"></div>
       <nav>
@@ -18,7 +23,7 @@
           <li>Why Somnia?</li>
           <li><button class="button">Get Somnia</button></li>
         </ul>
-        <button class="burger">
+        <button class="burger" aria-label="open menu">
           <svg
             version="1.1"
             id="Capa_1"
@@ -44,7 +49,7 @@
       </nav>
     </header>
     <section class="wrapper hero-section">
-      <img class="image" src="./assets/hero-phone.svg" alt="hero image, phone" />
+      <img class="image" src="./assets/hero-phone.svg" alt="hero image, phone" width="336" height="700" />
       <div class="text">
         <h1>Fall asleep faster with personalized ASMR sounds</h1>
         <button class="button">Get Somnia</button>
@@ -243,11 +248,11 @@
       <template id="composition">
         <article class="audio-container" style="--background: linear-gradient(#36329c, #261d69)">
           <div class="titles">
-            <h5 class="audio-title">{Title}</h5>
+            <h3 class="audio-title">{Title}</h3>
             <span class="audio-subtitle">{Excerpt}</span>
           </div>
           <div class="audio-player">
-            <audio class="player-1" id="player" controls></audio>
+            <audio class="player-1" controls></audio>
           </div>
         </article>
       </template>
@@ -282,13 +287,13 @@
       <div class="top">
         <img src="./assets/logo.svg" alt="footer logo" />
         <div class="block">
-          <h6>Download Somnia</h6>
+          <h4>Download Somnia</h4>
           <ul>
             <li>Get started</li>
           </ul>
         </div>
         <div class="block">
-          <h6>Helpful links</h6>
+          <h4>Helpful links</h4>
           <ul>
             <li>What is ASMR?</li>
             <li>Why Somnia</li>
@@ -296,7 +301,7 @@
           </ul>
         </div>
         <div class="block">
-          <h6>Get in touch</h6>
+          <h4>Get in touch</h4>
           <ul>
             <li>Facebook</li>
             <li>Instagram</li>
@@ -306,7 +311,7 @@
           </ul>
         </div>
         <div class="block block--downloads">
-          <h6>Get Somnia</h6>
+          <h4>Get Somnia</h4>
           <div class="download-buttons">
             <img src="./assets/appstore.svg" alt="" />
             <img src="./assets/googleplay.svg" alt="" />
