@@ -523,6 +523,7 @@ footer.wrapper {
 
 .feedback-section {
   margin-bottom: var(--sectionMargin);
+  min-height: 1000px;
 }
 .feedback-section h2 {
   margin-left: 20px;
