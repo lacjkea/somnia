@@ -9,6 +9,7 @@
     />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="./src/styles/style.scss" />
     <title>Somnia - ASMR sleep</title>
   </head>
   <body>
@@ -17,10 +18,10 @@
       <div class="wave"></div>
       <div class="stars"></div>
       <nav>
+        <template id="navigation-item-template">
+          <li class="navigation-item"><a href="/{slug}" class="navigation-link"></a></li>
+        </template>
         <ul class="navigation">
-          <li>Home</li>
-          <li>ASMR</li>
-          <li>Why Somnia?</li>
           <li><button class="button">Get Somnia</button></li>
         </ul>
         <button class="burger" aria-label="open menu">
@@ -68,7 +69,7 @@
         >
         <button class="button">Get somnia</button>
       </div>
-      <img class="image" src="./assets/intro-phones.svg" alt="intro image, phones" />
+      <img class="image" src="./assets/intro-phones.svg" alt="intro image, phones" width="450" height="500" />
     </section>
     <section class="wrapper features-section">
       <h2 class="wrapper">Key features</h2>
@@ -206,9 +207,9 @@
     <section class="awards-section">
       <h3 class="note">Immersive experience that helps you fall asleep faster.</h3>
       <div class="awards">
-        <img src="./assets/danish-sound.png" alt="badge" />
-        <img src="./assets/accelerace.png" alt="badge" />
-        <img src="./assets/soundhub.png" alt="badge" />
+        <img src="./assets/danish-sound.png" alt="badge" width="250" height="180" />
+        <img src="./assets/accelerace.png" alt="badge" width="250" height="180" />
+        <img src="./assets/soundhub.png" alt="badge" width="250" height="180" />
       </div>
     </section>
     <section class="wrapper audio-section">
@@ -220,7 +221,7 @@
           >This is only a preview, download the app to get the full spacial audio and no-looping experience.</span
         >
       </div>
-      <img class="image" src="./assets/phone-compositions.png" alt="phone with compositions" />
+      <img class="image" src="./assets/phone-compositions.png" alt="phone with compositions" width="250" height="525" />
 
       <template id="composition">
         <article class="audio-container" style="--background: linear-gradient(#36329c, #261d69)">
@@ -274,7 +275,7 @@
     </div>
     <footer class="wrapper">
       <div class="top">
-        <img src="./assets/logo.svg" alt="footer logo" />
+        <img src="./assets/logo.svg" alt="footer logo" width="200" height="65" />
         <div class="block">
           <h4>Download Somnia</h4>
           <ul>
@@ -302,8 +303,8 @@
         <div class="block block--downloads">
           <h4>Get Somnia</h4>
           <div class="download-buttons">
-            <img src="./assets/appstore.svg" alt="" />
-            <img src="./assets/googleplay.svg" alt="" />
+            <img src="./assets/appstore.svg" alt="" width="180" height="52" />
+            <img src="./assets/googleplay.svg" alt="" width="180" height="52" />
           </div>
         </div>
       </div>
@@ -312,6 +313,6 @@
         <span>Designed and developed by The Group </span>
       </div>
     </footer>
-    <script src="./src/script.js"></script>
+    <script src="./src/scripts/script.js"></script>
   </body>
 </html>

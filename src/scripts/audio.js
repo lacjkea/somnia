@@ -5,7 +5,6 @@ const GET_AUDIO_URL = 'https://javasquipt.com/wp-json/wp/v2/composition'
 fetch(GET_AUDIO_URL)
   .then(data => data.json())
   .then(compositions => {
-    console.log(compositions)
     compositions.forEach(renderComposition)
   })
 
@@ -24,6 +23,6 @@ const renderComposition = composition => {
 
   document.querySelector('.audio-list').appendChild(clone)
 
-  // create an audio player after appending
-  new Plyr(`.${composition.slug}`, {})
+  // creating an audio player after appending
+  new Plyr(`.${composition.slug}`)
 }

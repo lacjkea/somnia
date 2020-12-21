@@ -3,7 +3,6 @@ const GET_USER_FEEDBACK_URL = 'https://javasquipt.com/wp-json/wp/v2/user_feedbac
 fetch(GET_USER_FEEDBACK_URL)
   .then(data => data.json())
   .then(comments => {
-    console.log(comments)
     comments.forEach(renderFeedback)
   })
 

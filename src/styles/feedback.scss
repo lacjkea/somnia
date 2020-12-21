@@ -1,5 +1,6 @@
 .feedback-section {
   margin-bottom: var(--sectionMargin);
+  min-height: 1000px;
   h2 {
     margin-left: 20px;
   }
@@ -20,6 +21,10 @@
       margin: 0 20px;
       margin-bottom: 30px;
       padding: 30px;
+
+      @media only screen and (max-width: 500px) {
+        min-width: unset;
+      }
       .picture {
         width: 100px;
         height: 100px;
