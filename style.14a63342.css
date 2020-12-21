@@ -122,6 +122,10 @@ header .navigation li {
   margin-left: 40px;
   white-space: nowrap;
 }
+header .navigation li a {
+  color: white;
+  text-decoration: none;
+}
 header .logo {
   width: 170px;
 }
@@ -323,7 +327,6 @@ header .stars {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
