@@ -1,0 +1,7 @@
+.video-section {
+  margin-bottom: var(--sectionMargin);
+
+  .plyr__poster {
+    background-image: url(/static/thumbnail.png) !important;
+  }
+}

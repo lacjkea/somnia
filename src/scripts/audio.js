@@ -26,3 +26,5 @@ const renderComposition = composition => {
   // creating an audio player after appending
   new Plyr(`.${composition.slug}`)
 }
+
+new Plyr('#player')
