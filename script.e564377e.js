@@ -4626,7 +4626,7 @@ var renderFeedback = function renderFeedback(comment) {
   document.querySelector('.feedback-container').appendChild(clone);
 };
 },{}],"src/scripts/navigation.js":[function(require,module,exports) {
-var GET_NAVIGATION_URL = 'http://javasquipt.com/wp-json/wp/v2/pages';
+var GET_NAVIGATION_URL = 'https://javasquipt.com/wp-json/wp/v2/pages';
 fetch(GET_NAVIGATION_URL).then(function (data) {
   return data.json();
 }).then(function (navgiationItems) {
