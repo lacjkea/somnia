@@ -4604,6 +4604,8 @@ var renderComposition = function renderComposition(composition) {
 
   new _plyr.default(".".concat(composition.slug));
 };
+
+new _plyr.default('#player');
 },{"plyr":"node_modules/plyr/dist/plyr.min.js"}],"src/scripts/feedback.js":[function(require,module,exports) {
 var GET_USER_FEEDBACK_URL = 'https://javasquipt.com/wp-json/wp/v2/user_feedback?_embed';
 fetch(GET_USER_FEEDBACK_URL).then(function (data) {

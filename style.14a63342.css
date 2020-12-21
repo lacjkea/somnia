@@ -572,4 +572,11 @@ footer.wrapper {
   align-self: flex-start;
 }
 
+.video-section {
+  margin-bottom: var(--sectionMargin);
+}
+.video-section .plyr__poster {
+  background-image: url(/thumbnail.9bc6f4a4.png) !important;
+}
+
 /*# sourceMappingURL=/style.14a63342.css.map */
