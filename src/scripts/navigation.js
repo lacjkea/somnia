@@ -1,4 +1,4 @@
-const GET_NAVIGATION_URL = 'http://javasquipt.com/wp-json/wp/v2/pages'
+const GET_NAVIGATION_URL = 'https://javasquipt.com/wp-json/wp/v2/pages'
 
 fetch(GET_NAVIGATION_URL)
   .then(data => data.json())
