@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Kefa";
+    src: url("/static/Kefa.ttc") format("ttc"), url("/static/Kefa.ttc") format("ttc");
+}
+
+.pricing-section {
+    background: var(--purple);
+    width: 100%;
+    min-height: 700px;
+
+    .wrapper {
+        max-width: 1300px;
+        margin-bottom: 100px;
+        padding: 60px 0;
+
+        h2 {
+            color: var(--textBlue);
+            max-width: 30em;
+            margin: auto;
+            text-align: center;
+
+            span {
+                color: var(--textOrange);
+            }
+        }
+        .cards-container {
+            margin: 0 150px;
+            padding: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .card {
+            border-radius: 35px;
+            background: var(--blueGradient);
+            padding: 30px 50px;
+            margin: 10px;
+
+            h3 {
+                color: var(--textOrange);
+                font-size: 35px;
+                font-weight: bold;
+                padding: 20px 0;
+                border-bottom: 2px solid var(--lightPurple);
+                text-align: center;
+            }
+            p {
+                max-width: 200px;
+                color: var(--lightPurple);
+                padding: 20px 0;
+                border-bottom: 2px solid var(--lightPurple);
+                text-align: center;
+                line-height: 30px;
+            }
+            .price {
+                color: var(--textOrange);
+                font-size: 45px;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 20px;
+                display: block;
+            }
+            .cancel-text {
+                color: var(--lightPurple);
+                border-bottom: none;
+                text-align: center;
+            }
+            .asterisk {
+                font-size: 12px;
+                border-bottom: none;
+            }
+            .button {
+                display: block;
+                margin: auto;
+                padding: 15px 30px;
+                border-radius: 30px;
+                color: var(--textBlue);
+                background: var(--buttonGradient);
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 15px;
+                white-space: nowrap;
+                transition: all 0.3s;
+                &--lg {
+                    padding: 20px 38px;
+                    border-radius: 40px;
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    background: var(--buttonGradientHover);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024x) {
+}
