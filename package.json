@@ -4,19 +4,20 @@
   "description": "Project boilerplate with parcel and automatic deploying into the GitHub pages branch",
   "main": "index.js",
   "scripts": {
+    "start": "parcel index.html",
     "dev": "parcel index.html",
     "deploy": "parcel build --experimental-scope-hoisting index.html --public-url ./ && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamgiebl/parcel-boilerplate.git"
+    "url": "git+https://github.com/lacjkea/parcel-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adamgiebl/parcel-boilerplate/issues"
+    "url": "https://github.com/lacjkea/parcel-boilerplate/issues"
   },
-  "homepage": "https://somnia.adamgiebl.com",
+  "homepage": "https://github.com/lacjkea/somnia",
   "dependencies": {
     "gh-pages": "^3.1.0",
     "parcel-plugin-static-files-copy": "^2.3.1",
