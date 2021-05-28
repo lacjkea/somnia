@@ -582,4 +582,98 @@ footer.wrapper {
   background-image: url(/thumbnail.9bc6f4a4.png) !important;
 }
 
+.pricing-section {
+  background: url(/blobb.fdfc7b01.svg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  width: 100%;
+  min-height: 700px;
+  margin-bottom: 100px;
+  padding: 150px 0 100px 0;
+}
+@media only screen and (max-width: 966px) {
+  .pricing-section {
+    background: var(--purple);
+    padding: 100px 0;
+  }
+}
+.pricing-section .wrapper h2 {
+  color: var(--textBlue);
+  max-width: 30em;
+  margin: auto;
+  text-align: center;
+}
+.pricing-section .wrapper h2 span {
+  color: var(--textOrange);
+}
+.pricing-section .wrapper .cards-container {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.pricing-section .wrapper .card {
+  border-radius: 35px;
+  background: var(--blueGradient);
+  padding: 30px 50px;
+  margin: 10px;
+}
+.pricing-section .wrapper .card h3 {
+  color: var(--textOrange);
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--lightPurple);
+  text-align: center;
+}
+.pricing-section .wrapper .card p {
+  max-width: 200px;
+  color: var(--lightPurple);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--lightPurple);
+  text-align: center;
+  line-height: 30px;
+}
+.pricing-section .wrapper .card .price {
+  color: var(--textOrange);
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  display: block;
+}
+.pricing-section .wrapper .card .cancel-text {
+  color: var(--lightPurple);
+  border-bottom: none;
+  text-align: center;
+}
+.pricing-section .wrapper .card .asterisk {
+  font-size: 12px;
+  border-bottom: none;
+}
+.pricing-section .wrapper .card .button {
+  display: block;
+  margin: auto;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: var(--textBlue);
+  background: var(--buttonGradient);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+.pricing-section .wrapper .card .button--lg {
+  padding: 20px 38px;
+  border-radius: 40px;
+  font-size: 20px;
+}
+.pricing-section .wrapper .card .button:hover {
+  background: var(--buttonGradientHover);
+}
+
 /*# sourceMappingURL=/style.14a63342.css.map */
